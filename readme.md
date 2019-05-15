@@ -16,8 +16,19 @@ afficher : Merci de rafraichir la page pour avoir votre surprise !!!
 
 Tanque vous n'avez pas fini la première consigne ne pas faire la suite.  
 
-générer un token de 12 caractères pour l'envoyer par mail.  
+- générer un token de 12 caractères pour l'envoyer par mail.  
 créer un fichier avec pour nom le token  
 
+
+ne pas versionner les fichiers token
+
+-   faire un fichier token.txt mettre une ligne par nom de token
+
+-   envoyer lien par mail avec le paramètre token  
+
+
+si le lien est cliqué et que le fichier token existe supprimer le fichier token et afficher felicitation
+
+si le ficher token n'existe pas envoyer un mail avec tentative de piratage, puis afficher PRIRATE
 
 bien sûr tout ça sur git :)
