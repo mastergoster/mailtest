@@ -10,7 +10,7 @@ alors envoyer un mail à contact[arobase]apprendre.co
 supprimer $_SESSION['mail]  
 
 sinon  
-déclaré $_SESSION['mail]  
+déclarer $_SESSION['mail]  
 afficher : Merci de rafraichir la page pour avoir votre surprise !!!
 
 
@@ -20,4 +20,4 @@ générer un token de 12 caractères pour l'envoyer par mail.
 créer un fichier avec pour nom le token  
 
 
-bien sur tout ça sur git :)
+bien sûr tout ça sur git :)
