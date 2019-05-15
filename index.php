@@ -30,12 +30,23 @@ function envoiMail($objet, $mailto, $msg, $cci = true)//:string
 	return $mailer->send($message);
 }
 
+function idcool($length = 12){
+    $text="azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN1234567890";
+    return substr(md5(str_shuffle(str_repeat($text, $length))), 0, $length);
+}
+
 if(isset($_SESSION['mail']) && $_SESSION['mail'] == 'ok'){
-    envoiMail('visite sur page', 'contact@apprendre.co', 'il y a eu une visite sur la page');
+    $token = idcool();
+    fopen($token, 'w');
+    envoiMail('visite sur page', 'contact@apprendre.co', 'il y a eu une visite sur la page le token est : '.$token);
     echo 'votre surprise est envoyé ;)';
     unset($_SESSION['mail']);
 }else{
     $_SESSION['mail'] = 'ok';
     echo 'Merci de rafraichir la page pour avoir votre surprise !!!';
 }
+ 
 
+//$text="azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN1234567890";
+//var_dump(substr(md5(str_shuffle(str_repeat($text, 12))), 0, 12));
+//var_dump(substr(uniqid(), 1,13));
